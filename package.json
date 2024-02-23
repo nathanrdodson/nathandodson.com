@@ -11,5 +11,10 @@
   },
   "dependencies": {
     "astro": "^4.4.2"
+  },
+  "devDependencies": {
+    "iconoir": "^7.4.0",
+    "purecss": "^3.0.0",
+    "sass": "^1.71.1"
   }
 }

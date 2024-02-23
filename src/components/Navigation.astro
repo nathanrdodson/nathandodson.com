@@ -1,0 +1,227 @@
+---
+import logo from '../assets/img/logo.svg'
+---
+<script>
+	var button = document.getElementById("hamburger");
+	button.addEventListener('click', () => toggleMobileNav());
+	
+	function toggleMobileNav() {
+		var e = document.getElementById("mobile-nav")
+		
+		if (e.style.display != "flex") {
+			e.style.display = "flex";
+		} else {
+			e.style.display = "none";
+		}
+	}
+</script>
+<style lang="scss">
+	@use '../assets/css/_vars.scss' as *;
+	#nav {
+		// for smaller displays, default to none
+		display: none;
+
+		position: absolute;
+		height: 100%;
+		width: 100%;
+
+		// flexbox
+		flex-flow: column nowrap;
+		justify-content: space-between;
+		
+
+		padding-left: $nav-padding-left;
+		padding-right: $nav-padding-right;
+
+		background-color: $two-dp;
+		color: $on-background;
+
+		img { display: none; }
+
+		@media screen and (min-width: 48em) {
+			position: fixed; // fix
+			display: flex;
+
+			//positions
+			left: 0;
+			top: 0; // keep on top
+			z-index: 1; // keep on top
+			
+			height: 100%;
+			width: $nav-width;
+			
+			overflow-x: hidden; // disable horizontal scrolling on navbar
+
+			img { 
+				height: 20%; 
+				padding-left: 10px;
+			}
+		}
+	}
+
+	#mobile-nav {
+		position: absolute;
+		width: 100%;
+		height: calc(100% - $mobile-nav-height);
+
+		// flexbox
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: space-between;
+		
+
+		padding-left: $nav-padding-left;
+		padding-right: $nav-padding-right;
+
+		background-color: $two-dp;
+		color: $on-background;
+		
+		position: fixed; // fix
+
+		//positions
+		left: 0;
+		top: $mobile-nav-height; // keep on top
+		z-index: 1; // keep on top
+		
+		overflow-x: hidden; // disable horizontal scrolling on navbar
+
+		@media screen and (min-width: 48em) {
+			display: none;
+		}
+	}
+
+	#mobile-nav-menu {
+		background-color: $background;
+		position: fixed;
+		top: 0;
+		height: $mobile-nav-height;
+		width: 100%;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		img { 
+			height: 100%; 
+			padding-left: 10px;
+		}
+
+		i {
+			font-size: 1.4em;
+			padding-right: 15px;
+		}
+
+		@media screen and (min-width: 48em) {
+			display: none;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	ul, li { 
+		list-style-type: none; 
+	}
+
+	#root-list {
+		padding: 0 10px;
+		li { padding: 5px 0; }
+
+		#sub-list {
+			padding: 5px 0px 5px 5px;
+			li { padding: 0; }
+			
+			a {
+				// center icons and text within the <a> tags in the sublist
+				display: flex;
+				align-items: center;
+			}
+
+			i { padding: 0 5px 0 15px;; }
+			
+			font-size: 14px;
+			font-weight: 200;
+			font-style: italic; 
+		}	
+	}
+
+	#socials {
+		// align-self: center;
+		ul { padding: 0 10px; }
+		a {
+			// center icons and text within the <a> tags in the sublist
+			display: flex;
+			align-items: center;
+			
+			font-size: 14px;
+			text-decoration: none;
+			color: inherit;
+		}
+		
+		i { 
+			font-size: 18px;
+			padding-right: 5px;
+		}
+	}
+</style>
+
+
+<div id="mobile-nav-menu">
+	<img src={logo.src} alt="N.D;">
+	<a href="javascript:void(0)" id="hamburger">
+		<i class="iconoir-menu"></i>
+	</a>
+</div>
+
+<div id="mobile-nav">
+	<div>
+		<ul id="root-list">
+			<li><a href="blog">musings</a></li>
+			<ul id="sub-list">
+				<li><a href="blog"><i class="iconoir-nav-arrow-right"></i>opinion</a></li>
+				<li><a href="blog"><i class="iconoir-nav-arrow-right"></i>movies</a></li>
+				<li><a href="blog"><i class="iconoir-nav-arrow-right"></i>cooking</a></li>
+				<li><a href="blog"><i class="iconoir-nav-arrow-right"></i>music</a></li>
+			</ul>
+			<li><a href="photos">photography</a></li>
+			<li><a href="resume">resume</a></li>
+		</ul>
+	</div>
+	<div id="socials">
+		<ul>
+			<li><a href="mailto:nathanrdodson@gmail.com"><i class="iconoir-mail"></i>send a note</a></li>
+			<li><a href="https://linkedin.com/in/nathanrdodson/"><i class="iconoir-linkedin"></i>linkedin</a></li>
+			<li><a href="https://stats.fm/nrd"><i class="iconoir-spotify"></i>spotify stats</a></li>
+			<li><a href="https://github.com/nathanrdodson/"><i class="iconoir-github"></i>github</a></li>
+			<li><a href="https://letterboxd.com/nathanrdodson/"><i class="iconoir-movie"></i>letterboxd</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="nav">
+	<div>
+		<img src={logo.src} alt="N.D;">
+		<ul id="root-list">
+			<li><a href="blog">musings</a></li>
+			<ul id="sub-list">
+				<li><a href="blog"><i class="iconoir-nav-arrow-right"></i>opinion</a></li>
+				<li><a href="blog"><i class="iconoir-nav-arrow-right"></i>movies</a></li>
+				<li><a href="blog"><i class="iconoir-nav-arrow-right"></i>cooking</a></li>
+				<li><a href="blog"><i class="iconoir-nav-arrow-right"></i>music</a></li>
+			</ul>
+			<li><a href="photos">photography</a></li>
+			<li><a href="resume">resume</a></li>
+		</ul>
+	</div>
+	<div id="socials">
+		<ul>
+			<li><a href="mailto:nathanrdodson@gmail.com"><i class="iconoir-mail"></i>send a note</a></li>
+			<li><a href="https://linkedin.com/in/nathanrdodson/"><i class="iconoir-linkedin"></i>linkedin</a></li>
+			<li><a href="https://stats.fm/nrd"><i class="iconoir-spotify"></i>spotify stats</a></li>
+			<li><a href="https://github.com/nathanrdodson/"><i class="iconoir-github"></i>github</a></li>
+			<li><a href="https://letterboxd.com/nathanrdodson/"><i class="iconoir-movie"></i>letterboxd</a></li>
+		</ul>
+	</div>
+</nav>

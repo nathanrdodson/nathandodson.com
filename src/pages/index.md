@@ -1,0 +1,11 @@
+# *Hey!* - I'm Nathan.
+
+I'm happy you found my home on the internet :) A little bit about myself; a Kansan at heart, I have been a student at the University of Kansas c. 2019 and am currently finishing my MBA.
+
+Now, I'm actively applying and looking for software development and similar technical roles for post-graduation in May of 2024. Check out my resume to learn more about my professional background and past experiences.
+
+---
+
+At my core, I am a hobbyist - someone who focuses on and seeks value in my passions. From learning about the importance of movement ecology (see my trip to Tunisia), to building environmentally resilient communities, to photography of people/places/things, to the maintenance and development of my personal homelab, all the way to my day-to-day work as a software developer (and, right now, as a student). It is the culmination of these interests that have informed my life experience and have helped me establish my worldview.
+
+I am a big believer in localized focus; the notion that it isn't necessarily where you exist, but how you apply yourself to the betterment of your greater community that adds value to your life and the lives of others.

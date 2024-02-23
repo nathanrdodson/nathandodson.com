@@ -1,0 +1,59 @@
+// navbar
+$nav-padding-left: 15px;
+$nav-padding-right: 15px;
+$nav-width: 230px;
+$nav-offset: calc($nav-padding-right + $nav-padding-left + $nav-width);
+
+$mobile-nav-height: 75px;
+
+// colors (light)
+// $primary: #f72585;
+// $primary-var: #b5179e;
+// $secondary: #4cc9f0;
+// $background: #fff;
+// $surface: #fff;
+// $error: #e84ad0;
+// $on-primary: #fff;
+// $on-secondary: #000;
+// $on-background: #000;
+// $on-surface: #000;
+// $on-error: #fff;
+
+// | elevation | overlay |   hex   |
+// | --------- | ------- | ------- |
+// |   00dp    |    0%   | #121212 |
+// |   01dp    |    5%   | #1e1e1e |
+// |   02dp    |    7%   | #222222 |
+// |   03dp    |    8%   | #242424 |
+// |   04dp    |    9%   | #272727 |
+// |   06dp    |   11%   | #2c2c2c |
+// |   08dp    |   12%   | #2e2e2e |
+// |   12dp    |   14%   | #333333 |
+// |   16dp    |   15%   | #343434 |
+// |   24dp    |   16%   | #383838 |
+
+// colors (dark)
+$primary: #FA7CB5;
+$primary-var: #b5179e;
+$secondary: #4cc9f0;
+$background: #121212;
+$surface: #121212;
+
+// floaters
+$zero-dp: $background;
+$one-dp: #1e1e1e; //  5%   
+$two-dp: #222222; //  7%   
+$three-dp: #242424; //  8%   
+$four-dp: #272727; //  9%   
+$six-dp: #2c2c2c; // 11%   
+$eight-dp: #2e2e2e; // 12%   
+$one-two-dp: #333333; // 14%   
+$one-six-dp: #343434; // 15%   
+$two-four-dp: #383838; // 16%
+
+$error: #e84ad0;
+$on-primary: #000;
+$on-secondary: #000;
+$on-background: #fff;
+$on-surface: #fff;
+$on-error: #000;
